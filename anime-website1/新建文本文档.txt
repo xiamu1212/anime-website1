@@ -1,0 +1,33 @@
+https://www.bilibili.com/read/cv3745303
+
+
+ /* 渐变色 可以书写对哦个颜色，第一个值可以书写渐变角度 */
+                background: linear-gradient(90deg,red,pink,blue,yellow)
+            }
+
+
+ /* 超出部分隐藏 */
+                overflow: hidden;
+                position: relative;
+
+
+
+https://www.qifeiye.com/%e5%93%8d%e5%ba%94%e5%bc%8f%e7%bd%91%e7%ab%99%e6%a8%a1%e6%9d%bf-%e5%93%8d%e5%ba%94%e5%bc%8f%e6%a8%a1%e6%9d%bf-h5%e6%a8%a1%e6%9d%bf/
+
+
+http://seven.ywapk.com/on/yx-dm/dm23/b5/ccid73937/?renqun_youhua=2314616&bd_vid=8964093365810460463
+
+
+
+二次元高清壁纸4k全屏
+
+
+
+ 找图片用：display: none;（隐藏标签）
+
+
+1920x1080 大图尺寸
+
+
+https://gitee.com/we-xiamu
+

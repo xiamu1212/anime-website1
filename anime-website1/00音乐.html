@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>音乐</title>
+            </head>
+            <style>
+                *{
+                    margin: 0px;
+                    padding: 0px;
+                    list-style: none;
+                }
+                body{
+                    background-image:url(images/yingyue2.jpg);  
+                        background-repeat: no-repeat; 
+                        background-size:100% auto;   
+                        background-attachment: fixed; 
+                }
+                       
+                .a{
+                    width: 1000px;
+                    height: 1700px;
+                    /* background: skyblue; */
+                    margin: auto;
+                    /* z-index: -1; */
+                    /* opacity: 0.7;
+                 filter:alpha(opacity=70);  */
+                   
+                } 
+                nav{
+                width: 70px;
+                height: 70px;
+                /* background:red; */
+                /* 使用动画 
+                    animation 动画名字 持续时间 次数 平滑linear
+                    infinite无穷
+                */
+                animation:rotate 8s infinite linear;
+
+            }
+            nav img
+            {
+                border-radius: 10px;
+            }
+
+            @keyframes rotate{
+                0%{
+                    transform: translate(0px,0px)
+                }
+                25%{
+                    transform: translate(950px,0px);
+                    background:red;
+                    border-radius: 50%;
+                }
+                50%{
+                    transform: translate(950px,1650px) ;
+                    border-radius: 50%;
+                 
+                }
+                75%{
+                    transform: translate(0px,1650px) rotate(720deg)
+                }
+                100%{
+                    transform: translate(0px,0px)
+                }
+            }
+          /* .a0{ 
+                width: 200px;
+                height: 200px;
+                background:lime;
+                animation: move 30s infinite linear;
+            } */
+            
+                .a1{
+                    width: 800px;
+                    height:400px;
+                    /* background: red; */
+                    margin-left:100px;
+                    margin-top:30px;
+                    position: absolute;
+                }
+                .box1 {
+                        position:relative;
+                        width:100%;
+                        margin:0 auto;
+                    }
+                /* .a1    h1 {
+                        text-align:center;
+                        color:#fff;
+                    } */
+                    .zhu{
+                        width:200px;
+                        position:absolute;
+                        top:50px;
+                        left:700px;
+                    }
+                    .zhu a {
+                        font-size:40px;
+                        color:#fff;
+                        text-decoration:none;
+                        letter-spacing:15px;
+                    }
+                    .box2 {
+                        width:200px;
+                        height:300px;
+                        position:relative;
+                        margin:200px auto;
+                        transform-style:preserve-3d;
+                        animation:fn 10s;
+                        animation-iteration-count:infinite;
+                        animation-timing-function:linear;
+                    }
+                   .a1 img {
+                        width:300px;
+                        height:470px;
+                    }
+                    .box2 div {
+                        width:200px;
+                        height:300px;
+                        position:absolute;
+                        left:0;
+                        top:0;
+                    }
+                    .box2:hover {
+                        animation-play-state:paused;
+                    }
+                    .i1 {
+                        transform:rotateY(0deg) translateZ(485px);
+                    }
+                    .i2 {
+                        transform:rotateY(40deg) translateZ(485px);
+                    }
+                    .i3 {
+                        transform:rotateY(80deg) translateZ(485px);
+                    }
+                    .i4 {
+                        transform:rotateY(120deg) translateZ(485px);
+                    }
+                    .i5 {
+                        transform:rotateY(160deg) translateZ(485px);
+                    }
+                    .i6 {
+                        transform:rotateY(200deg) translateZ(485px);
+                    }
+                    .i7 {
+                        transform:rotateY(240deg) translateZ(485px);
+                    }
+                    .i8 {
+                        transform:rotateY(280deg) translateZ(485px);
+                    }
+                    .i9 {
+                        transform:rotateY(320deg) translateZ(485px);
+                    }
+                    @keyframes fn {
+                        0% {
+                        transform:rotateX(-15deg) rotateY(0deg);
+                    }
+                    100% {
+                        transform:rotateX(-15deg) rotateY(360deg);
+                    }
+                                 }
+                /* .b{
+                    width: 800px;
+                    height:275px;
+                    background: red;
+                    margin-left: 100px;
+                    margin-top: 220px;
+                    position: absolute;
+                } */
+                .c{
+                    width: 260px;
+                    height:250px;
+                    /* background: red; */
+                    margin-left: 290px;
+                    margin-top: 550px;
+                    position: absolute;
+                }
+                .d{
+                    width: 563px;
+                     height: 320px;
+                     background: red;
+                     margin-left: 215px;
+                     margin-top: 830px;
+                     position: absolute;
+                }
+                .e{
+                    width: 1000px;
+                height: 400px;
+                /* background: red; */
+                /* margin-left: 140px; */
+                margin-top: 1183px;
+                position: absolute;
+                }
+                    /* .c ul {   
+                            width: 200px;
+                            height: 100px;
+                            /* background:red; 
+                            margin:100px auto;
+                             position: relative; 
+                            加此样式，才能真正进入三维坐标 
+                            transform-style: preserve-3d;
+                            animation: move 2s infinite linear;
+                        
+                        }
+                        @keyframes move {
+                            0%{
+                                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+                            }
+                             25%{
+                                transform: rotateX(45deg) rotateY(45deg) rotateZ(45deg)
+                            } 
+                            50%{
+                                transform: rotateX(90deg) rotateY(90deg) rotateZ(90deg)
+                            }
+                             75%{
+                                transform: rotateX(135deg) rotateY(135deg) rotateZ(135deg)
+                            } 
+                            100%{
+                                transform: rotateX(180deg) rotateY(180deg) rotateZ(180deg)
+                            }
+                        }
+
+                        .c   li{
+                            width: 200px;
+                            height: 200px;
+                        /* border:1px solid orange; 
+                            position: absolute;
+                            left:0px;
+                            top:0px
+                        }
+                    .c li:nth-of-type(1){
+                        
+                            transform: translateZ(100px)
+                        }
+                    .c  li:nth-of-type(2){
+                        
+                            transform: translateZ(-100px)
+                        }
+                    .c   li:nth-of-type(3){
+                        
+                            transform: translateX(-100px) rotateY(90deg)
+                        }
+                    .c  li:nth-of-type(4){
+                        
+                            transform:translateX(100px) rotateY(90deg)
+                        }
+                    .c    li:nth-of-type(5){
+                        
+                            transform:translateY(100px) rotateX(90deg)
+                        }
+                    .c  li:nth-of-type(6){
+                        
+                            transform:translateY(-100px) rotateX(90deg)
+                        } */
+
+               .d video{
+                     width: 563px;
+                     height: 320px;
+               }
+              
+              .e img{
+                width: 1200px;
+                height: 400px;
+                margin-left: -100px;
+                   opacity: 0.7;
+                 filter:alpha(opacity=70); 
+              }
+
+            </style>
+            <body>
+                <div class="a">
+                    <nav class="a0"> 
+                        <img src="images/pic.xiaotubiao3.jpg" alt="" width="70" height="70">
+                    </nav>
+                    <div class="a1">
+
+                        <div class="box1">
+
+                            <!-- <h1>CSS图片旋转效果</h1> -->
+                            <div class="box2">
+                                <div class="i1">
+                                    <img src="images/pic.l3.jpg" alt="" >
+                                </div>
+                                <div class="i2">
+                                    <img src="images/pic.l5.jpg" alt="">
+                                </div>
+                                <div class="i3">
+                                    <img src="images/pic.l34.jpg" alt="">
+                                </div>
+                                <div class="i4">
+                                    <img src="images/pic.l7.jpg" alt="">
+                                </div>
+                                <div class="i5">
+                                    <img src="images/pic.l23.jpg" alt="" >
+                                </div>
+                                <div class="i6">
+                                    <img src="images/pic.l30.jpg" alt="">
+                                </div>
+                                <div class="i7">
+                                    <img src="images/pic.l25.jpg" alt="">
+                                </div>
+                                <div class="i8">
+                                    <img src="images/pic.l28.jpg" alt="">
+                                </div>
+                                <div class="i9">
+                                    <img src="images/pic.l32.jpg" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- <div class="b"></div> -->
+                    <!-- <div class="c">
+                        <ul>
+                            <li><img src="images/pic.dl3.jpg" alt="" width="200" height="200"></li>
+                            <li><img src="images/pic.dl19.jpg" alt=""  width="200" height="200"></li>
+                            <li><img src="images/pic.dl13.jpg" alt=""  width="200" height="200"></li>
+                            <li><img src="images/pic.dl14.jpg" alt=""  width="200" height="200"></li>
+                            <li><img src="images/pic.dl15.jpg" alt=""  width="200" height="200"></li>
+                            <li><img src="images/pic.dl16.jpg" alt=""  width="200" height="200"></li>
+                        </ul>
+                    </div> -->
+                    <div class="d">
+                        <video src="images/yingyue1.mp4" controls></video>
+                    </div>
+                    <div class="e">
+                          <!-- <ul>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                              <li></li>
+                          </ul> -->
+                          <ul>
+                              <li><img src="images/yingyue8.png" alt=""></li>
+                          </ul>
+                    </div>
+                </div>
+            </body>
+            </html>
+            

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>漫画</title>
+            <!-- <link rel="stylesheet" href="css/style.css">
+            <script src="js/jquery-1.7.2.min.js"></script>
+            <script src="js/my.js"></script> -->
+        </head>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+            }
+            .a0{
+                /* width: 7500px; */
+                height: 360px;
+                background: red;
+                margin: auto;
+            }
+            .a{
+                width: 1500px;
+                height: 2000px;
+                background: skyblue;
+                margin: auto;
+            }
+            .b{
+                font-size: 28px;
+                width: 1500px;
+                height: 100px;
+                background: rgb(69, 99, 110);
+            }
+            .b li{
+                float: left;
+                padding-left: 90px;
+                margin-top: 30px;
+            }
+            .c{
+                width: 1000px;
+                height: 800px;
+                /* background: chocolate; */
+                margin: auto;
+                margin-top: 50px;
+            }
+            .c li{
+                float: left;
+                margin-left: 25px;
+            }
+            .d{
+                width: 1500px;
+                height: 600px;
+                background: #dc143c;
+                margin-top: 50px;
+                background: url('images/z0.png'); 
+              margin-left: auto;
+              margin-right: auto; 
+            }
+            .e1{
+                width: 1500px;
+                height: 50px;
+                /* background: cyan; */
+                margin-top: 40px;
+            }
+            .e1 h1{
+                color: white;
+               
+            }
+            .e2{
+                width: 1500px;
+                height: 250px;
+                /* background: cyan; */
+                margin-top: 50px;
+            }
+        .e2 li{
+            margin-top: 10px;
+            margin-left: 100px;
+            float: left;
+        }
+            .e3{
+                width: 1500px;
+                height: 250px;
+                background: cyan;
+                margin-top: 50px;
+            }
+            .e3 li{
+            margin-top: 10px;
+            margin-left: 150px;
+            float: left;
+        }
+        
+         #container {
+         	/* margin:100px auto; */
+         	width:3000px;
+            margin: auto;
+         	visibility:visible;
+         	overflow:hidden;
+         	z-index:2;
+         }
+         #con-ul {
+         	/* margin:0;
+         	padding:0; */
+         	list-style-type:none;
+         	z-index:1;
+         	width:7500px;
+         	height:360px;
+         }
+       .a0  li {
+         	float:left;
+         	margin:0 5px;
+         	overflow:hidden;
+         }
+       .a0  img {
+         	display:block;
+         	border:1px solid red;
+         	width:639px;
+         	height:360px;
+         }
+         
+        </style>
+        <body>
+            <div class="a0">
+                <div id="container">
+                    <ul id="con-ul" style="position: relative; left: 0;">
+                        <li><img src="images/m1.jpg" height="360" width="639"> </li>
+                        <li><img src="images/m2.png" height="360" width="639"></li>
+                        <li><img src="images/m3.png" height="360" width="639"></li>
+                        <li><img src="images/m4.jpg" height="360" width="639"></li>
+                        <li><img src="images/m5.png" height="360" width="639"> </li>
+                        <li><img src="images/m6.png" height="360" width="639"></li>
+                        <li><img src="images/m7.png" height="360" width="639"></li>
+                        <li><img src="images/m8.png" height="360" width="639"></li>
+                        
+                    </ul>
+                </div>
+                    <script>
+                    window.onload = init;
+                      let conUl = document.getElementById('con-ul');
+                      let timer = null;
+                      
+                      function init() {
+                          timer = setInterval('common()', 30);
+                      } // 把定时器函数封装       
+                      function common() {
+                          let left = parseInt(conUl.style.left);
+                          conUl.style.left = (left - 1) + 'px';
+                          // 判断left距离是否到了ul宽度的三分之二，如果是就把left设置为零            
+                          if (Math.abs(parseInt(conUl.style.left)) === parseInt(conUl.offsetWidth * 2 / 3)) {
+                              conUl.style.left = 0;
+                          }
+                      }
+                           
+                      conUl.onmousemove = function() {
+                          clearInterval(timer);
+                      }
+                           
+                      conUl.onmouseout = function() {
+                          timer = setInterval('common()', 30);
+                      }
+                    </script>
+               
+            </div>
+            <div class="a">
+                <div class="b">
+                    <ul>
+                        <li>冒险</li>
+                        <li>热血</li>
+                        <li>搞笑</li>
+                        <li> 恋爱</li>
+                        <li>少女</li>
+                        <li> 日常</li>
+                        <li>校园</li>
+                        <li>运动</li>
+                        <li>古风</li>
+                        <li>玄幻</li>
+                    </ul>
+                </div>
+                <div class="c">
+                    <ul>
+                        <li> <img src="images/z1.jpg" alt="" width="250" height="300"> </li>
+                        <li> <img src="images/z2.jpg" alt="" width="250" height="300"> </li>
+                        <li> <img src="images/z3.jpg" alt="" width="250" height="300"> </li>
+                        <li> <img src="images/z4.jpg" alt="" width="250" height="300"> </li>
+                        <li> <img src="images/z5.jpg" alt="" width="250" height="300"> </li>
+                        <li> <img src="images/z6.jpg" alt="" width="250" height="300"> </li>
+                    </ul>
+                </div>
+                <div class="d">
+                   
+                
+                        <div class="e1">
+                            <h1>高能排行</h1>
+                        </div>
+                        <div class="e2">
+                           <ul>
+                               <li><img src="images/j1.png" alt=""></li>
+                               <li><img src="images/z7.jpg" alt="" width="180" height="237"></li>
+                               <li><img src="images/j2.jpg" alt="" width="180" height="237"></li>
+                               <li><img src="images/j3.jpg" alt="" width="180" height="237"></li>
+                               <li><img src="images/j4.jpg" alt="" width="180" height="237"></li>
+                           </ul>
+                        </div>
+                        <div class="e3">
+                            <li><img src="images/z7.jpg" alt="" width="180" height="237"></li>
+                               <li><img src="images/j2.jpg" alt="" width="180" height="237"></li>
+                               <li><img src="images/j3.jpg" alt="" width="180" height="237"></li>
+                               <li><img src="images/j4.jpg" alt="" width="180" height="237"></li>
+                        </div>
+                   
+                </div>
+            </div>
+        </body>
+</html>

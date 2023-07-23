@@ -1,0 +1,20 @@
+1.标签
+    div实现布局
+    img引入图片
+    a超链接跳转
+    h1引入logo
+    ul>li实现结构类似
+    p引入段落
+    span和i引入小元素 行内标签
+2.样式
+    width宽度
+    heigth高度
+    margin外边距
+    padding内边距
+    background背景
+    border边框
+    color文字颜色
+    font-size文字大小
+    border-radius圆角
+    font-weight:bold文字加粗
+    float:left/right浮动

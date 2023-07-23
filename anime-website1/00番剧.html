@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>番剧</title>
+            <style>
+                *{
+                    margin: 0px;
+                    padding: 0px;
+                    list-style: none;
+                }
+                .a{
+                    width: 1920px;
+                    height: 2000px;
+                    /* background: skyblue; */
+                    margin: auto;
+                }
+                .b{
+                    width: 1920px;
+                    height: 180px;
+                }
+                nav{
+                width: 1160px;
+                height: 322px;
+                margin:100px auto;
+                position: relative;
+                /* 超出隐藏 */
+                overflow: hidden;
+                /* border-radius: 20px; */
+            }
+          .c  ul{
+                width: 9999px;
+            }
+        .c    ul li{
+                float: left;
+            }
+            ol{
+                position: absolute;
+                bottom:20px;
+                left: 50%;
+                /* translateX设置百分比，参照物是标签的宽度 */
+                transform: translateX(-50%)
+            }
+            ol li{
+                width: 8px;
+                height: 8px;
+                background:white;
+                border-radius: 50%;
+                margin:0px 4px;
+                float: left;
+                cursor: pointer;
+            }
+            span{
+                position: absolute;
+                background:lime;
+                top:50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+            span:nth-of-type(1){
+                left: 10px;
+            }
+            span:nth-of-type(2){
+                right: 10px;
+            }
+            .current{
+                background:lime;
+            }
+            .d{
+                width: 1160px;
+                height: 50px;
+                /* background: chocolate; */
+                margin: auto;
+            }
+            .e{
+                width: 1160px;
+                height: 700px;
+                /* background: chocolate; */
+                margin: auto;
+                margin-top: 5px;
+                /* opacity: 0.7;
+                 filter:alpha(opacity=70);  */
+            }
+            .e li{
+                float: left;
+                margin-top: 50px;
+                margin-left: 100px;
+            }
+            .f{
+                width: 1160px;
+                height: 50px;
+                /* background: chocolate; */
+                margin: auto;
+                margin-top: 50px;
+            }
+            .g{
+                width: 1160px;
+                height: 400px;
+                background: chocolate;
+                margin: auto;
+                margin-top: 5px;
+            }
+            .g li{
+                float: left;
+                margin-top: 30px;
+                margin-left: 100px;
+            }
+            </style>
+        </head>
+        <body>
+            <div class="a">
+                <div class="b">
+                    <img src="images/f1.jpg" alt="">
+                </div>
+                <div class="c">
+                    <nav id="wrap">
+                        <ul id="box">
+                            <li>
+                                <img src="images/f2.png" alt="" width="1160">
+                            </li>
+                            <li>
+                                <img src="images/f3.png" alt="" width="1160">
+                            </li>
+                            <li>
+                                <img src="images/f4.png" alt="" width="1160">
+                            </li>
+                          
+                            <li>
+                                <img src="images/f5.png" alt="" width="1160">
+                            </li>
+                            <li>
+                                <img src="images/f6.png" alt="" width="1160">
+                            </li>
+                        </ul>
+                        <!-- ol>li有序列表，用法和ul一模一样  实现小点点-->
+                        <ol id="list">
+                            <li class="current"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            
+                        </ol>
+                       <!-- <span id="left">左</span>
+                        <span id="right">右</span>  -->
+                    </nav>
+                    <script>
+                        // 获取标签
+                        var box=document.getElementById('box');
+                        var wrap=document.getElementById('wrap');
+                        var right=document.getElementById('right');
+                        var left=document.getElementById('left');
+                        // a.children 选择a的子级 得到的是一个类数组
+                        var list=document.getElementById('list').children
+                        var num=0;
+                        var timer;
+                        // 函数的作用，封装。把重复代码封装起来 function 函数名(){执行代码}
+                        function fn(){
+                            // 页面刚进来的时候，自动播放
+                            timer=setInterval(function(){
+                            num++;
+                            if(num>4){
+                                num=0;
+                            }
+                            var t=-num*1160;
+                                // 修改css 常量和变量中间使用+拼接
+                                box.style.transform='translateX('+t+'px)';
+                                // 排他
+                                for(var j=0;j<list.length;j++){
+                                    list[j].className='';
+                                }
+                                // 小圆点变色
+                                list[num].className='current'
+                            },2000)
+                        }
+                        // 使用函数 相当于把函数执行一遍
+                        fn()
+                        // 鼠标移入，停止定时器
+                        wrap.onmouseenter=function(){
+                            clearInterval(timer)
+                        }
+                        // 鼠标移出，重新开始
+                        wrap.onmouseleave=function(){
+                           fn()
+                        }
+            
+                        // 所有的小圆点
+                        for(var i=0;i<list.length;i++){
+                            // 自定义属性
+                            list[i].index=i;
+                            list[i].onclick=function(){
+                                // 排他
+                                for(var j=0;j<list.length;j++){
+                                    list[j].className='';
+                                }
+                                this.className='current';
+                                // 获取index
+                                num=this.index;
+                                var t=-num*1160;
+                                // 修改css 常量和变量中间使用+拼接
+                                box.style.transform='translateX('+t+'px)';
+                            }
+                        }
+            
+                        // 右边绑定事件
+                        right.onclick=function(){
+                            num++;
+                            if(num>4){
+                                num=0;
+                            }
+                            var t=-num*1160;
+                                // 修改css 常量和变量中间使用+拼接
+                                box.style.transform='translateX('+t+'px)';
+                                // 排他
+                                for(var j=0;j<list.length;j++){
+                                    list[j].className='';
+                                }
+                                // 小圆点变色
+                                list[num].className='current'
+                        }
+                        left.onclick=function(){
+                            num--;
+                            if(num<0){
+                                num=4;
+                            }
+                            var t=-num*1160;
+                                // 修改css 常量和变量中间使用+拼接
+                                box.style.transform='translateX('+t+'px)';
+                                // 排他
+                                for(var j=0;j<list.length;j++){
+                                    list[j].className='';
+                                }
+                                // 小圆点变色
+                                list[num].className='current'
+                        }
+            
+                    </script>
+                </div>
+                <div class="d">
+                    <h1>最近更新</h1>
+                </div>
+                <div class="e">
+                    <ul>
+                        <li><img src="images/b1.png" alt=""></li>
+                        <li><img src="images/b2.png" alt=""></li>
+                        <li><img src="images/b3.png" alt=""></li>
+                        <li><img src="images/b4.png" alt=""></li>
+                        <li><img src="images/b5.png" alt=""></li>
+                        <li><img src="images/b6.png" alt=""></li>
+                        <li><img src="images/b7.png" alt=""></li>
+                        <li><img src="images/b8.png" alt=""></li>
+                        <li><img src="images/b9.png" alt=""></li>
+                        <li><img src="images/b10.png" alt=""></li>
+                        <li>  <img src="images/b11.png" alt=""></li>
+                        <li>  <img src="images/b12.png" alt=""></li>
+                        <li>  <img src="images/b13.png" alt=""></li>
+                        <li>  <img src="images/b14.png" alt=""></li>
+                        <li> <img src="images/b15.png" alt=""></li>
+                        <li> <img src="images/b16.png" alt=""></li>
+                        <li> <img src="images/b17.png" alt=""></li>
+                        <li> <img src="images/b18.png" alt=""></li>
+                        <li> <img src="images/b19.png" alt=""></li>
+                        <li> <img src="images/b20.png" alt=""></li>
+                       
+                    </ul>  
+                </div>
+                <div class="f">
+                    <h1>连载动漫</h1>
+                </div>
+                <div class="g">
+                    <ul>
+                        <li> <img src="images/n1.jpg" alt=""></li>
+                        <li> <img src="images/n2.jpg" alt=""></li>
+                        <li> <img src="images/n11.jpg" alt=""></li>
+                        <li> <img src="images/n6.jpg" alt=""></li>
+                        <li> <img src="images/n12.png" alt=""></li>
+                        <li> <img src="images/n13.jpg" alt=""></li>
+                       
+                    </ul> 
+                </div>
+            </div>
+        </body>
+</html>

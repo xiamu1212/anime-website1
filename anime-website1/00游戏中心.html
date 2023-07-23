@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>游戏中心</title>
+            <style>
+                *{
+                    margin: 0px;
+                    padding: 0px;
+                    list-style: none;
+                }
+                .a{
+                    width: 1300px;
+                    height: 1900px;
+                    /* background: skyblue; */
+                    margin: auto;
+                }
+                .b{
+                    width: 1300px;
+                    height: 300px;
+                    background: slateblue;
+                    background-image:url(images/y1.png);  
+                    background-repeat: no-repeat; 
+                     background-size:100% auto;    
+                }
+                .c{
+                    width: 900px;
+                    height: 300px;
+                    margin: auto;
+                    margin-top: 20px;
+                    /* background: springgreen; */
+                }
+                .c1{
+                    width: 900px;
+                    height: 50px;
+                    /* background: yellow; */
+                }
+                .c2{
+                    width: 1000px;
+                    height: 240px;
+                    /* background: black; */
+                    margin-top: 10px;
+                    margin-left: -50px;
+                }
+                .c3{
+                    width: 240px;
+                    height: 240px;
+                    /* background: blanchedalmond; */
+                    margin-left: 7px;
+                    float: left;
+                }
+                .c4{
+                    width: 240px;
+                    height: 240px;
+                    /* background: blanchedalmond; */
+                    margin-left: 10px;
+                    float: left;
+                }
+                .c5{
+                    width: 240px;
+                    height: 240px;
+                    /* background: blanchedalmond; */
+                    margin-left: 10px;
+                    float: left;
+                }
+                .c6{
+                    width: 240px;
+                    height: 240px;
+                    /* background: blanchedalmond; */
+                    margin-left: 10px;
+                    float: left;
+                }
+                .c7{
+                    width: 240px;
+                    height: 107px;
+                    background: rgb(230, 155, 43);
+                    /* margin-left: 10px; */
+                    float: left;
+                    margin-top: 60px;
+                }
+                .c8{
+                    width: 240px;
+                    height: 30px;
+                    background: rgb(207, 198, 184);
+                    margin-top: 10px;
+                    float: left;
+                }
+                .c9{
+                    width: 240px;
+                    height: 107px;
+                    background: rgb(230, 155, 43);
+                    /* margin-left: 10px; */
+                    float: left;
+                    margin-top: 60px;
+                }
+                .c10{
+                    width: 240px;
+                    height: 30px;
+                    background: rgb(207, 198, 184);
+                    margin-top: 10px;
+                    float: left;
+                }
+                .c11{
+                    width: 240px;
+                    height: 107px;
+                    background: rgb(230, 155, 43);
+                    /* margin-left: 10px; */
+                    float: left;
+                    margin-top: 60px;
+                }
+                .c12{
+                    width: 240px;
+                    height: 30px;
+                    background: rgb(207, 198, 184);
+                    margin-top: 10px;
+                    float: left;
+                }
+                .c13{
+                    width: 240px;
+                    height: 107px;
+                    background: rgb(230, 155, 43);
+                    /* margin-left: 10px; */
+                    float: left;
+                    margin-top: 60px;
+                }
+                .c14{
+                    width: 240px;
+                    height: 30px;
+                    background: rgb(207, 198, 184);
+                    margin-top: 10px;
+                    float: left;
+                }
+             
+                .d{
+                    width: 1000px;
+                    height: 280px;
+                    margin: auto;
+                    margin-top: 40px;
+                    /* background: springgreen; */
+                    margin-left: -50px;
+                }
+                .e{
+                    width: 720px;
+                    height: 280px;
+                    margin: auto;
+                    margin-top: 40px;
+                    background: springgreen;
+                }
+                .f{
+                    width: 720px;
+                    height: 280px;
+                    margin: auto;
+                    margin-top: 40px;
+                    background: springgreen;
+                }
+                .g{
+                    width: 720px;
+                    height: 280px;
+                    margin: auto;
+                    margin-top: 40px;
+                    background: springgreen;
+                }
+                p{
+                    text-align: center;
+                }
+                /* .m{
+                    width: 800px;
+                    height: 300px;
+                    background: chartreuse;
+                    margin: auto;
+                } */
+                nav{
+                width: 900px;
+                height: 300px;
+                margin:100px auto;
+                position: relative;
+                /* 超出隐藏 */
+                overflow: hidden;
+                /* border-radius: 20px; */
+            }
+            ul{
+                width: 9999px;
+            }
+            ul li{
+                float: left;
+            }
+            ol{
+                position: absolute;
+                bottom:20px;
+                left: 50%;
+                /* translateX设置百分比，参照物是标签的宽度 */
+                transform: translateX(-50%)
+            }
+            ol li{
+                width: 8px;
+                height: 8px;
+                background:white;
+                border-radius: 50%;
+                margin:0px 4px;
+                float: left;
+                cursor: pointer;
+            }
+            span{
+                position: absolute;
+                background:lime;
+                top:50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+            span:nth-of-type(1){
+                left: 10px;
+            }
+            span:nth-of-type(2){
+                right: 10px;
+            }
+            .current{
+                background:lime;
+            }
+        </style>
+            </style>
+        </head>
+        <body>
+            <div class="a">
+                <div class="b">
+                    <div class="m">
+                        <nav id="wrap">
+                            <ul id="box">
+                                <li>
+                                    <img src="images/v1.webp" alt="" width="900">
+                                </li>
+                                <li>
+                                    <img src="images/v2.webp" alt="" width="900">
+                                </li>
+                                <li>
+                                    <img src="images/v3.webp" alt="" width="900">
+                                </li>
+                              
+                            </ul>
+                            <!-- ol>li有序列表，用法和ul一模一样  实现小点点-->
+                            <ol id="list">
+                                <li class="current"></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ol>
+                            <span id="left">左</span>
+                            <span id="right">右</span>
+                        </nav>
+                        <script>
+                            // 获取标签
+                            var box=document.getElementById('box');
+                            var wrap=document.getElementById('wrap');
+                            var right=document.getElementById('right');
+                            var left=document.getElementById('left');
+                            // a.children 选择a的子级 得到的是一个类数组
+                            var list=document.getElementById('list').children
+                            var num=0;
+                            var timer;
+                            // 函数的作用，封装。把重复代码封装起来 function 函数名(){执行代码}
+                            function fn(){
+                                // 页面刚进来的时候，自动播放
+                                timer=setInterval(function(){
+                                num++;
+                                if(num>2){
+                                    num=0;
+                                }
+                                var t=-num*900;
+                                    // 修改css 常量和变量中间使用+拼接
+                                    box.style.transform='translateX('+t+'px)';
+                                    // 排他
+                                    for(var j=0;j<list.length;j++){
+                                        list[j].className='';
+                                    }
+                                    // 小圆点变色
+                                    list[num].className='current'
+                                },2000)
+                            }
+                            // 使用函数 相当于把函数执行一遍
+                            fn()
+                            // 鼠标移入，停止定时器
+                            wrap.onmouseenter=function(){
+                                clearInterval(timer)
+                            }
+                            // 鼠标移出，重新开始
+                            wrap.onmouseleave=function(){
+                               fn()
+                            }
+                
+                            // 所有的小圆点
+                            for(var i=0;i<list.length;i++){
+                                // 自定义属性
+                                list[i].index=i;
+                                list[i].onclick=function(){
+                                    // 排他
+                                    for(var j=0;j<list.length;j++){
+                                        list[j].className='';
+                                    }
+                                    this.className='current';
+                                    // 获取index
+                                    num=this.index;
+                                    var t=-num*900;
+                                    // 修改css 常量和变量中间使用+拼接
+                                    box.style.transform='translateX('+t+'px)';
+                                }
+                            }
+                
+                            // 右边绑定事件
+                            right.onclick=function(){
+                                num++;
+                                if(num>2){
+                                    num=0;
+                                }
+                                var t=-num*900;
+                                    // 修改css 常量和变量中间使用+拼接
+                                    box.style.transform='translateX('+t+'px)';
+                                    // 排他
+                                    for(var j=0;j<list.length;j++){
+                                        list[j].className='';
+                                    }
+                                    // 小圆点变色
+                                    list[num].className='current'
+                            }
+                            left.onclick=function(){
+                                num--;
+                                if(num<0){
+                                    num=2;
+                                }
+                                var t=-num*900;
+                                    // 修改css 常量和变量中间使用+拼接
+                                    box.style.transform='translateX('+t+'px)';
+                                    // 排他
+                                    for(var j=0;j<list.length;j++){
+                                        list[j].className='';
+                                    }
+                                    // 小圆点变色
+                                    list[num].className='current'
+                            }
+                
+                        </script>
+                    </div>
+                </div>
+                <div class="c">
+                    <div class="c1"></div>
+                    <div class="c2">
+                        <div class="c3">
+                            <div class="c7">
+                                <img src="images/o1.webp" alt="" width="240" height="107">
+                            </div>
+                            <div class="c8">
+                                <p>坎特伯雷公主...</p>
+                            </div>
+                        </div>
+                        <div class="c4">
+                            <div class="c9">
+                                <img src="images/o2.webp" alt="" width="240" height="107">
+                            </div>
+                            <div class="c10">
+                                <p>摩尔庄园</p>
+                            </div>
+                        </div>
+                        <div class="c5">
+                            <div class="c11">
+                                <img src="images/o3.webp" alt="" width="240" height="107">
+                            </div>
+                            <div class="c12">
+                                <p>机动战姬</p>
+                            </div>
+                        </div>
+                        <div class="c6">
+                            <div class="c13">
+                                <img src="images/o4.webp" alt="" width="240" height="107">
+                            </div>
+                            <div class="c14">
+                                <p>一起开火车</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d">
+                        <img src="images/y5.png" alt="" width="1000" height="280">
+                    </div>
+                    <div class="e">
+                        <img src="images/y2.webp" alt="">
+                    </div>
+                    <div class="f">
+                        <img src="images/y3.webp" alt="">
+                    </div>
+                    <div class="g">
+                        <img src="images/y4.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </body>
+</html>
